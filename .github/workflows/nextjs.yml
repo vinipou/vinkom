@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: nextjs-site
-          path: ./out
+          path: ./.next
 
   deploy:
     runs-on: ubuntu-latest
