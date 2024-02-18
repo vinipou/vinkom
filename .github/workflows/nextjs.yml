@@ -48,6 +48,5 @@ jobs:
         username: u98282221
         password: IUbf29guufU98&/
         port: 22
-        protocol: sftp
         local-dir: "./out/"
         server-dir: "/out"
