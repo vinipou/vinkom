@@ -27,22 +27,23 @@ jobs:
       - name: Build with Next.js
         run: npm run build
       
-      # Entfernen des Static HTML export Schritts, da wir SSR verwenden
+      - name: Static HTML export with Next.js
+        run: npm run export
       
-      - name: Upload build artifact for deployment
+      - name: Upload artifact for deployment
         uses: actions/upload-artifact@v2
         with:
-          name: nextjs-build
-          path: ./.next
+          name: nextjs-site
+          path: ./out
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Download build artifact
+      - name: Download artifact
         uses: actions/download-artifact@v2
         with:
-          name: nextjs-build
+          name: nextjs-site
     
       - name: Deploy to IONOS via SFTP using SCP
         uses: appleboy/scp-action@master
@@ -50,6 +51,6 @@ jobs:
           host: access794949688.webspace-data.io
           username: u98282221
           port: 22
-          source: "./*"
+          source: "./out/*"
           target: "/out"
           password: IUbf29guufU98&/  # Passwort direkt angegeben (Nicht empfohlen)
