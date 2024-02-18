@@ -40,13 +40,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: nextjs-site
-    
+
       - name: Deploy to IONOS via SFTP using SCP
-        uses: appleboy/scp-action@master
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           host: access794949688.webspace-data.io
           username: u98282221
