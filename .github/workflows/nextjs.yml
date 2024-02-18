@@ -52,4 +52,4 @@ jobs:
           port: 22
           username: u98282221
           password: IUbf29guufU98&/
-          local-dir: ./out
+          local-dir: ./
