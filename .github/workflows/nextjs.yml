@@ -51,5 +51,5 @@ jobs:
           username: u98282221
           port: 22
           source: "./.next/*"
-          target: "/path/to/your/server/directory/.next"
+          target: "/out"
           password: IUbf29guufU98&/  # Passwort direkt angegeben (Nicht empfohlen)
