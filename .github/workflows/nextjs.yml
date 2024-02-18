@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: nextjs-site
-          path: ./VINKOM/out
+          path: ./out
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,4 +52,4 @@ jobs:
           port: 22
           username: u98282221
           password: IUbf29guufU98&/
-          local-dir: ./VINKOM/out/
+          local-dir: ./
