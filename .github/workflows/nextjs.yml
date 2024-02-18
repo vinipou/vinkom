@@ -1,14 +1,12 @@
-
 on:
   push:
     branches: ["main"]
 
-    name: Deploy Next.js site to IONOS
+name: Deploy Next.js site to IONOS
+
 jobs:
-  
   web-deploy:
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v2
