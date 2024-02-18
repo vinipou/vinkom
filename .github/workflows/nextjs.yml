@@ -45,10 +45,10 @@ jobs:
         with:
           name: nextjs-site
       
-      - name: Deploy to IONOS via FTP
+      - name: Deploy to IONOS via SFTP
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          server: ftps://${{ secrets.FTP_SERVER }}/
+          server: sftps://${{ secrets.FTP_SERVER }}/
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
