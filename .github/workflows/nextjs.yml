@@ -48,4 +48,4 @@ jobs:
           password: IUbf29guufU98&/
           port: 22
           local-dir: ./out/
-          server-dir: /out/
+          server-dir: ./out/
