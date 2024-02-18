@@ -45,15 +45,12 @@ jobs:
         with:
           name: nextjs-site
     
-      - name: Deploy to IONOS via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      - name: Deploy to IONOS via SFTP using SCP
+        uses: appleboy/scp-action@master
         with:
-          server: access794949688.webspace-data.io
-          port: 22
+          host: access794949688.webspace-data.io
           username: u98282221
-          password: IUbf29guufU98&/
-          local-dir: ./out*/
-
-
-
-
+          port: 22
+          source: "./out/*"
+          target: "/out"
+          password: IUbf29guufU98&/  # Passwort direkt angegeben (Nicht empfohlen)
