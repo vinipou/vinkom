@@ -52,4 +52,3 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
-          git-ftp-args: --insecure # Entfernen Sie dieses Argument, wenn Ihr Server FTP über SSL/TLS unterstützt
