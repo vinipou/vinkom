@@ -45,7 +45,7 @@ jobs:
         with:
           server: access794949688.webspace-data.io
           username: u98282221
-          password: ${{ secrets.SFTP_PASSWORD }}
+          password: IUbf29guufU98&/
           port: 22
           local-dir: ./out/
           server-dir: /out
