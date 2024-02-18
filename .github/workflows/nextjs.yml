@@ -29,12 +29,9 @@ jobs:
       
       - name: Static HTML export with Next.js
         run: npm run export
-      
-      - name: Upload artifact for deployment
-        uses: actions/upload-artifact@v2
-        with:
-          name: nextjs-site
-          path: ./out
+
+      - name: List contents of dist directory
+        run: ls -l ./dist/
 
   deploy:
     runs-on: ubuntu-latest
