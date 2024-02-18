@@ -40,13 +40,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-
-      - name: Deploy to IONOS via SFTP using SCP
+      - name: Deploy to IONOS via SFTP
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-        server: access794949688.webspace-data.io
-        username: u98282221
-        password: IUbf29guufU98&/
-        port: 22
-        local-dir: "./out/"
-        server-dir: "/out"
+          server: access794949688.webspace-data.io
+          username: u98282221
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 22
+          local-dir: ./out/
+          server-dir: /out
